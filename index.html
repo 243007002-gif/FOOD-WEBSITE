@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bibek Roy – A premium fine dining experience. Explore our exquisite menu, make reservations, and discover culinary artistry at its finest.">
+  <title>Bibek Roy – Fine Dining Experience</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="nav-inner">
+      <button class="nav-hamburger" id="hamburger-btn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#E5D6C1"/>
+              <stop offset="100%" style="stop-color:#C9A96E"/>
+            </linearGradient>
+          </defs>
+          <!-- Decorative line top -->
+          <line x1="10" y1="12" x2="60" y2="12" stroke="url(#logoGrad)" stroke-width="0.7" opacity="0.6"/>
+          <line x1="160" y1="12" x2="210" y2="12" stroke="url(#logoGrad)" stroke-width="0.7" opacity="0.6"/>
+          <!-- Small diamond center -->
+          <polygon points="110,8 113,12 110,16 107,12" fill="url(#logoGrad)" opacity="0.8"/>
+          <!-- Main text -->
+          <text x="110" y="37" font-family="Cormorant Garamond, serif" font-size="20" font-weight="500" font-style="italic" fill="url(#logoGrad)" text-anchor="middle" letter-spacing="3">Bibek Roy</text>
+          <!-- Subtitle -->
+          <text x="110" y="52" font-family="Inter, sans-serif" font-size="7" font-weight="300" fill="#A08060" text-anchor="middle" letter-spacing="4">FINE DINING</text>
+          <!-- Decorative line bottom -->
+          <line x1="10" y1="57" x2="60" y2="57" stroke="url(#logoGrad)" stroke-width="0.5" opacity="0.4"/>
+          <line x1="160" y1="57" x2="210" y2="57" stroke="url(#logoGrad)" stroke-width="0.5" opacity="0.4"/>
+        </svg>
+      </a>
+      <div class="nav-links">
+        <a href="menu.html" class="nav-link">MENU</a>
+        <a href="about.html" class="nav-link">ABOUT</a>
+        <a href="reservation.html" class="nav-btn">BOOK A TABLE</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Full-Screen Menu Overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <button class="menu-overlay-close" id="menu-overlay-close" aria-label="Close menu">✕</button>
+    <div class="menu-overlay-inner">
+      <nav class="menu-overlay-nav">
+        <a href="index.html" class="overlay-link">Home</a>
+        <a href="menu.html" class="overlay-link">Menu</a>
+        <a href="about.html" class="overlay-link">About</a>
+        <a href="reservation.html" class="overlay-link">Reservation</a>
+      </nav>
+      <div class="overlay-info">
+        <p>Mon–Sun: 12:00 – 23:00</p>
+        <p>+1 (555) 234-5678</p>
+        <p>12 Gourmet Lane, New York</p>
+      </div>
+      <div class="overlay-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.736l7.324-9.06L2 2.25h6.016l4.27 5.65 5.958-5.65Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="overlay-image-side">
+      <img src="images/ambiance_1.png" alt="Restaurant ambiance" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Hero Section – Split Layout -->
+  <section class="hero" id="hero">
+    <!-- Left: Full-screen food image with text -->
+    <div class="hero-left">
+      <img src="images/hero_food_plates.png" alt="Signature dish" class="hero-bg-image">
+      <div class="hero-text-block">
+        <span class="hero-eyebrow">Est. 2024</span>
+        <h1 class="hero-title">CULINARY<br><em>ARTISTRY</em></h1>
+      </div>
+      <div class="hero-scroll-indicator">
+        <span>Scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+
+    <!-- Right: Navigation Cards -->
+    <div class="hero-right">
+      <a href="menu.html" class="hero-card" id="hero-card-menu">
+        <img src="images/dish_steak.png" alt="Menu" class="hero-card-img">
+        <div class="hero-card-content">
+          <span class="hero-card-label">MENU</span>
+          <span class="hero-card-arrow">→</span>
+        </div>
+      </a>
+      <a href="reservation.html" class="hero-card" id="hero-card-reservation">
+        <img src="images/reservation.png" alt="Reservation" class="hero-card-img">
+        <div class="hero-card-content">
+          <span class="hero-card-label">RESERVATION</span>
+          <span class="hero-card-arrow">→</span>
+        </div>
+      </a>
+      <a href="about.html" class="hero-card" id="hero-card-about">
+        <img src="images/restaurant_interior.png" alt="Our Restaurant" class="hero-card-img">
+        <div class="hero-card-content">
+          <span class="hero-card-label">OUR RESTAURANT</span>
+          <span class="hero-card-arrow">→</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Social Sidebar -->
+  <div class="social-sidebar">
+    <a href="#" class="social-icon" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="#" class="social-icon" aria-label="Twitter/X">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.736l7.324-9.06L2 2.25h6.016l4.27 5.65 5.958-5.65Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+    </a>
+    <a href="#" class="social-icon" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+  </div>
+
+
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-ring" id="cursor-ring"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

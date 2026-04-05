@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About Bibek Roy Fine Dining – Our story, our philosophy, our awards. Discover the passion behind every plate.">
+  <title>About – Bibek Roy Fine Dining</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="nav-inner">
+      <button class="nav-hamburger" id="hamburger-btn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#E5D6C1"/>
+              <stop offset="100%" style="stop-color:#C9A96E"/>
+            </linearGradient>
+          </defs>
+          <line x1="10" y1="12" x2="60" y2="12" stroke="url(#logoGrad)" stroke-width="0.7" opacity="0.6"/>
+          <line x1="160" y1="12" x2="210" y2="12" stroke="url(#logoGrad)" stroke-width="0.7" opacity="0.6"/>
+          <polygon points="110,8 113,12 110,16 107,12" fill="url(#logoGrad)" opacity="0.8"/>
+          <text x="110" y="37" font-family="Cormorant Garamond, serif" font-size="20" font-weight="500" font-style="italic" fill="url(#logoGrad)" text-anchor="middle" letter-spacing="3">Bibek Roy</text>
+          <text x="110" y="52" font-family="Inter, sans-serif" font-size="7" font-weight="300" fill="#A08060" text-anchor="middle" letter-spacing="4">FINE DINING</text>
+          <line x1="10" y1="57" x2="60" y2="57" stroke="url(#logoGrad)" stroke-width="0.5" opacity="0.4"/>
+          <line x1="160" y1="57" x2="210" y2="57" stroke="url(#logoGrad)" stroke-width="0.5" opacity="0.4"/>
+        </svg>
+      </a>
+      <div class="nav-links">
+        <a href="menu.html" class="nav-link">MENU</a>
+        <a href="about.html" class="nav-link">ABOUT</a>
+        <a href="reservation.html" class="nav-btn">BOOK A TABLE</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Full-Screen Menu Overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <button class="menu-overlay-close" id="menu-overlay-close" aria-label="Close menu">✕</button>
+    <div class="menu-overlay-inner">
+      <nav class="menu-overlay-nav">
+        <a href="index.html" class="overlay-link">Home</a>
+        <a href="menu.html" class="overlay-link">Menu</a>
+        <a href="about.html" class="overlay-link">About</a>
+        <a href="reservation.html" class="overlay-link">Reservation</a>
+      </nav>
+      <div class="overlay-info">
+        <p>Mon–Sun: 12:00 – 23:00</p>
+        <p>+1 (555) 234-5678</p>
+        <p>12 Gourmet Lane, New York</p>
+      </div>
+      <div class="overlay-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.736l7.324-9.06L2 2.25h6.016l4.27 5.65 5.958-5.65Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="overlay-image-side">
+      <img src="images/ambiance_2.png" alt="Restaurant ambiance" loading="lazy">
+    </div>
+  </div>
+
+  <!-- About Hero -->
+  <section class="about-hero">
+    <div class="about-hero-image">
+      <img src="images/restaurant_interior.png" alt="Restaurant Interior">
+    </div>
+    <div class="about-hero-content">
+      <span class="section-tag">OUR STORY</span>
+      <h1>Culinary <em>Artistry</em><br>Redefined</h1>
+      <p>At Bibek Roy, every dish tells a story. We believe that dining is not merely sustenance — it is an experience that should stir the senses, inspire wonder, and create memories that last a lifetime.</p>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section style="padding: 100px 80px; border-top: 1px solid var(--border-subtle); display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
+    <div class="reveal">
+      <span class="section-tag">OUR PHILOSOPHY</span>
+      <h2 style="font-family: var(--font-serif); font-size: clamp(36px, 4vw, 52px); font-weight: 300; color: var(--text-cream); line-height: 1.1; margin-bottom: 24px;">Where Passion Meets <em style="font-style:italic; color:var(--text-gold-light)">Perfection</em></h2>
+      <p style="font-size: 14px; color: var(--text-muted); line-height: 1.9; margin-bottom: 16px;">We source only the finest seasonal ingredients, from hand-dived scallops off the Scottish coast to rare heritage breed meats from artisan farms. Our commitment to provenance is unwavering.</p>
+      <p style="font-size: 14px; color: var(--text-muted); line-height: 1.9;">Every evening is a performance, every dish a composition. Our kitchen is where classical French technique meets modern Asian sensibility — an unexpected harmony that defines the Bibek Roy experience.</p>
+    </div>
+    <div class="reveal reveal-delay-2">
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2px;">
+        <div style="overflow: hidden; aspect-ratio: 1;">
+          <img src="images/dish_pasta.png" alt="Dish" style="width:100%; height:100%; object-fit:cover; filter:brightness(0.75); transition: transform 0.7s ease;">
+        </div>
+        <div style="overflow: hidden; aspect-ratio: 1;">
+          <img src="images/dish_steak.png" alt="Dish" style="width:100%; height:100%; object-fit:cover; filter:brightness(0.75); transition: transform 0.7s ease;">
+        </div>
+        <div style="overflow: hidden; aspect-ratio: 1;">
+          <img src="images/dish_seafood.png" alt="Dish" style="width:100%; height:100%; object-fit:cover; filter:brightness(0.75); transition: transform 0.7s ease;">
+        </div>
+        <div style="overflow: hidden; aspect-ratio: 1;">
+          <img src="images/dish_cocktail.png" alt="Dish" style="width:100%; height:100%; object-fit:cover; filter:brightness(0.75); transition: transform 0.7s ease;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards Section -->
+  <section class="awards-section">
+    <div class="section-header reveal">
+      <span class="section-tag">RECOGNITION</span>
+      <h2>Awards & <em>Reviews</em></h2>
+    </div>
+    <div class="awards-grid">
+      <div class="award-card reveal">
+        <div class="award-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="award-name">Michelin Guide</div>
+        <div class="award-source" style="margin-bottom:16px;">TWO STARS</div>
+        <p style="font-size:13px; color:var(--text-muted); line-height:1.7; font-style:italic;">"A triumph of modern cuisine. Bibek Roy delivers a dining experience that is as intellectually stimulating as it is delicious."</p>
+      </div>
+      <div class="award-card reveal reveal-delay-1">
+        <div class="award-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="award-name">TripAdvisor</div>
+        <div class="award-source" style="margin-bottom:16px;">TRAVELLER'S CHOICE</div>
+        <p style="font-size:13px; color:var(--text-muted); line-height:1.7; font-style:italic;">"Possibly the finest restaurant we have ever visited. Impeccable service, breathtaking food, and an atmosphere that cannot be replicated."</p>
+      </div>
+      <div class="award-card reveal reveal-delay-2">
+        <div class="award-stars">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <div class="award-name">Star Dining</div>
+        <div class="award-source" style="margin-bottom:16px;">#1 FINE DINING 2024</div>
+        <p style="font-size:13px; color:var(--text-muted); line-height:1.7; font-style:italic;">"Chef Roy's mastery is evident in every single dish. A truly world-class establishment that sets the benchmark for fine dining in the city."</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Section -->
+  <section class="story-section">
+    <div class="story-image">
+      <img src="images/chef.png" alt="Chef Bibek Roy">
+    </div>
+    <div class="story-content">
+      <span class="section-tag">THE CHEF</span>
+      <h2>The Vision of<br><em>Bibek Roy</em></h2>
+      <p>Born in Kolkata and trained across the finest kitchens of Paris, Tokyo, and New York, Chef Bibek Roy brings together a lifetime of culinary discovery into every dish he creates.</p>
+      <p>After earning his master's degree in culinary arts from Le Cordon Bleu Paris, Bibek worked under three Michelin-starred chefs including Alain Ducasse and Joël Robuchon before opening his eponymous restaurant in 2018.</p>
+      <p>His cooking philosophy is simple: honour the ingredient, surprise the palate, and never compromise on quality — no matter what. Today, the restaurant bears his name and his promise.</p>
+      <a href="reservation.html" style="display:inline-flex; align-items:center; gap:12px; margin-top:32px; font-size:11px; letter-spacing:3px; color:var(--text-gold); border-bottom:1px solid var(--border-gold); padding-bottom:8px; transition:all 0.4s; text-decoration:none;">
+        RESERVE A TABLE <span style="font-size:18px;">→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Ambiance Section -->
+  <section style="padding: 100px 80px; border-top: 1px solid var(--border-subtle);">
+    <div class="section-header reveal">
+      <span class="section-tag">THE SPACE</span>
+      <h2>An Atmosphere Like <em>No Other</em></h2>
+    </div>
+    <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2px; margin-top: 60px;">
+      <div style="overflow:hidden; max-height:500px;">
+        <img src="images/ambiance_1.png" alt="Ambiance" style="width:100%; height:100%; object-fit:cover; filter:brightness(0.75); transition:transform 0.7s ease;" class="reveal" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+      </div>
+      <div style="display:flex; flex-direction:column; gap:2px;">
+        <div style="overflow:hidden; flex:1;">
+          <img src="images/ambiance_2.png" alt="Ambiance" style="width:100%; height:100%; object-fit:cover; filter:brightness(0.75); transition:transform 0.7s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+        <div style="overflow:hidden; flex:1;">
+          <img src="images/ambiance_3.png" alt="Ambiance" style="width:100%; height:100%; object-fit:cover; filter:brightness(0.75); transition:transform 0.7s ease;" onmouseover="this.style.transform='scale(1.04)'" onmouseout="this.style.transform='scale(1)'">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section style="padding: 120px 80px; text-align:center; border-top: 1px solid var(--border-subtle); background: radial-gradient(ellipse at center, rgba(201,169,110,0.06) 0%, transparent 70%);">
+    <span class="section-tag reveal" style="justify-content:center;">JOIN US</span>
+    <h2 class="reveal" style="font-family:var(--font-serif); font-size:clamp(48px, 6vw, 80px); font-weight:300; color:var(--text-cream); line-height:1.05; margin-bottom:24px;">Reserve Your<br><em style="font-style:italic; color:var(--text-gold-light)">Experience</em></h2>
+    <p class="reveal" style="font-size:14px; color:var(--text-muted); max-width:400px; margin:0 auto 48px; line-height:1.8;">We welcome you to experience the art of fine dining. Tables are limited and in high demand — we recommend booking well in advance.</p>
+    <a href="reservation.html" class="reveal" style="display:inline-block; background:var(--text-gold); color:var(--bg-primary); padding:20px 60px; font-family:var(--font-sans); font-size:11px; font-weight:600; letter-spacing:3px; border-radius:3px; transition:all 0.4s; text-decoration:none;" onmouseover="this.style.background='var(--text-gold-light)'; this.style.transform='translateY(-3px)'; this.style.boxShadow='0 20px 60px rgba(201,169,110,0.3)'" onmouseout="this.style.background='var(--text-gold)'; this.style.transform='none'; this.style.boxShadow='none'">BOOK A TABLE</a>
+  </section>
+
+  <!-- Social Sidebar -->
+  <div class="social-sidebar">
+    <a href="#" class="social-icon" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="#" class="social-icon" aria-label="Twitter/X">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.736l7.324-9.06L2 2.25h6.016l4.27 5.65 5.958-5.65Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+    </a>
+    <a href="#" class="social-icon" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+  </div>
+
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-ring" id="cursor-ring"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

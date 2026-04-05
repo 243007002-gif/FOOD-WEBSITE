@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore the Bibek Roy fine dining menu. From exquisite starters to artisan mains, each dish is a culinary masterpiece.">
+  <title>Menu – Bibek Roy Fine Dining</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="nav-inner">
+      <button class="nav-hamburger" id="hamburger-btn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#E5D6C1"/>
+              <stop offset="100%" style="stop-color:#C9A96E"/>
+            </linearGradient>
+          </defs>
+          <line x1="10" y1="12" x2="60" y2="12" stroke="url(#logoGrad)" stroke-width="0.7" opacity="0.6"/>
+          <line x1="160" y1="12" x2="210" y2="12" stroke="url(#logoGrad)" stroke-width="0.7" opacity="0.6"/>
+          <polygon points="110,8 113,12 110,16 107,12" fill="url(#logoGrad)" opacity="0.8"/>
+          <text x="110" y="37" font-family="Cormorant Garamond, serif" font-size="20" font-weight="500" font-style="italic" fill="url(#logoGrad)" text-anchor="middle" letter-spacing="3">Bibek Roy</text>
+          <text x="110" y="52" font-family="Inter, sans-serif" font-size="7" font-weight="300" fill="#A08060" text-anchor="middle" letter-spacing="4">FINE DINING</text>
+          <line x1="10" y1="57" x2="60" y2="57" stroke="url(#logoGrad)" stroke-width="0.5" opacity="0.4"/>
+          <line x1="160" y1="57" x2="210" y2="57" stroke="url(#logoGrad)" stroke-width="0.5" opacity="0.4"/>
+        </svg>
+      </a>
+      <div class="nav-links">
+        <a href="menu.html" class="nav-link">MENU</a>
+        <a href="about.html" class="nav-link">ABOUT</a>
+        <a href="reservation.html" class="nav-btn">BOOK A TABLE</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Full-Screen Menu Overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <button class="menu-overlay-close" id="menu-overlay-close" aria-label="Close menu">✕</button>
+    <div class="menu-overlay-inner">
+      <nav class="menu-overlay-nav">
+        <a href="index.html" class="overlay-link">Home</a>
+        <a href="menu.html" class="overlay-link">Menu</a>
+        <a href="about.html" class="overlay-link">About</a>
+        <a href="reservation.html" class="overlay-link">Reservation</a>
+      </nav>
+      <div class="overlay-info">
+        <p>Mon–Sun: 12:00 – 23:00</p>
+        <p>+1 (555) 234-5678</p>
+        <p>12 Gourmet Lane, New York</p>
+      </div>
+      <div class="overlay-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.736l7.324-9.06L2 2.25h6.016l4.27 5.65 5.958-5.65Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="overlay-image-side">
+      <img src="images/ambiance_1.png" alt="Restaurant ambiance" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Menu Layout: Split Screen -->
+  <div class="page-layout">
+    <!-- Left Sticky Image -->
+    <div class="page-sticky-side">
+      <img src="images/menu_bg.png" alt="Menu" id="menu-sticky-img">
+      <div class="sticky-overlay">
+        <div class="sticky-title">
+          OUR<br>
+          <em>Tasting</em><br>
+          MENU
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Scrollable Content -->
+    <div class="page-scroll-content">
+      <div class="menu-header reveal">
+        <p class="menu-header-text">CURATED SELECTION</p>
+        <h2>Explore the Flavours</h2>
+      </div>
+
+      <!-- Category Tabs -->
+      <div class="menu-cats">
+        <button class="menu-cat-btn active" data-cat="starters" id="cat-starters">STARTERS</button>
+        <button class="menu-cat-btn" data-cat="mains" id="cat-mains">MAINS</button>
+        <button class="menu-cat-btn" data-cat="seafood" id="cat-seafood">SEAFOOD</button>
+        <button class="menu-cat-btn" data-cat="desserts" id="cat-desserts">DESSERTS</button>
+        <button class="menu-cat-btn" data-cat="cocktails" id="cat-cocktails">COCKTAILS</button>
+      </div>
+
+      <!-- Starters -->
+      <div class="menu-section active" id="section-starters">
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">Seared Scallops</div>
+            <div class="menu-item-desc">Pan-seared king scallops, cauliflower purée, crispy pancetta, truffle oil drizzle</div>
+            <span class="menu-item-tag">CHEF'S PICK</span>
+          </div>
+          <div class="menu-item-price">$28</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-1">
+          <div>
+            <div class="menu-item-name">Burrata & Heirloom</div>
+            <div class="menu-item-desc">Creamy burrata, heirloom tomatoes, basil oil, aged balsamic, sea salt flakes</div>
+          </div>
+          <div class="menu-item-price">$22</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-2">
+          <div>
+            <div class="menu-item-name">Tuna Tartare</div>
+            <div class="menu-item-desc">Yellowfin tuna, avocado mousse, sesame, ponzu gel, crispy wonton</div>
+            <span class="menu-item-tag">SIGNATURE</span>
+          </div>
+          <div class="menu-item-price">$32</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-3">
+          <div>
+            <div class="menu-item-name">Foie Gras Torchon</div>
+            <div class="menu-item-desc">Duck foie gras, brioche toast, fig compote, Sauternes gel, microherbs</div>
+          </div>
+          <div class="menu-item-price">$38</div>
+        </div>
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">Mushroom Velouté</div>
+            <div class="menu-item-desc">Wild mushroom velouté, truffle foam, hazelnut crumble, chives</div>
+          </div>
+          <div class="menu-item-price">$18</div>
+        </div>
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">Lobster Bisque</div>
+            <div class="menu-item-desc">Rich lobster bisque, tarragon cream, brandy, lobster medallion, caviar</div>
+            <span class="menu-item-tag">SEASONAL</span>
+          </div>
+          <div class="menu-item-price">$36</div>
+        </div>
+      </div>
+
+      <!-- Mains -->
+      <div class="menu-section" id="section-mains">
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">Wagyu Beef Tenderloin</div>
+            <div class="menu-item-desc">A5 Wagyu, bone marrow butter, truffle potato gratin, port wine jus</div>
+            <span class="menu-item-tag">CHEF'S PICK</span>
+          </div>
+          <div class="menu-item-price">$95</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-1">
+          <div>
+            <div class="menu-item-name">Duck à l'Orange</div>
+            <div class="menu-item-desc">Confit duck leg, orange and grand marnier sauce, braised red cabbage, fondant potato</div>
+            <span class="menu-item-tag">SIGNATURE</span>
+          </div>
+          <div class="menu-item-price">$52</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-2">
+          <div>
+            <div class="menu-item-name">Herb-Crusted Rack of Lamb</div>
+            <div class="menu-item-desc">New Zealand lamb, Dijon and herb crust, ratatouille, rosemary jus, minted pea purée</div>
+          </div>
+          <div class="menu-item-price">$68</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-3">
+          <div>
+            <div class="menu-item-name">Truffle Risotto</div>
+            <div class="menu-item-desc">Carnaroli risotto, black truffle, aged Parmigiano, chives, drizzle of truffle oil</div>
+          </div>
+          <div class="menu-item-price">$48</div>
+        </div>
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">Roasted Chicken Suprême</div>
+            <div class="menu-item-desc">Free-range chicken, black garlic butter, celeriac purée, wild mushroom ragù</div>
+          </div>
+          <div class="menu-item-price">$44</div>
+        </div>
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">Slow-Braised Short Rib</div>
+            <div class="menu-item-desc">72-hour beef short rib, smoked potato purée, pickled shallots, bourbon glaze</div>
+          </div>
+          <div class="menu-item-price">$58</div>
+        </div>
+      </div>
+
+      <!-- Seafood -->
+      <div class="menu-section" id="section-seafood">
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">Whole Grilled Sea Bass</div>
+            <div class="menu-item-desc">Mediterranean sea bass, lemon caper butter, samphire, charred fennel, dill oil</div>
+            <span class="menu-item-tag">FRESH CATCH</span>
+          </div>
+          <div class="menu-item-price">$62</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-1">
+          <div>
+            <div class="menu-item-name">Lobster Thermidor</div>
+            <div class="menu-item-desc">Whole lobster, cognac cream sauce, Gruyère crust, pommes frites, watercress salad</div>
+            <span class="menu-item-tag">SIGNATURE</span>
+          </div>
+          <div class="menu-item-price">$88</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-2">
+          <div>
+            <div class="menu-item-name">Pan-Seared Halibut</div>
+            <div class="menu-item-desc">Atlantic halibut, saffron beurre blanc, asparagus, crispy capers, micro herbs</div>
+          </div>
+          <div class="menu-item-price">$58</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-3">
+          <div>
+            <div class="menu-item-name">King Prawn Linguine</div>
+            <div class="menu-item-desc">Tiger prawns, tomato, chili, garlic, white wine, fresh pasta, parsley</div>
+          </div>
+          <div class="menu-item-price">$46</div>
+        </div>
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">Miso Glazed Salmon</div>
+            <div class="menu-item-desc">Salmon fillet, white miso glaze, bok choy, jasmine rice, ponzu drizzle</div>
+          </div>
+          <div class="menu-item-price">$42</div>
+        </div>
+      </div>
+
+      <!-- Desserts -->
+      <div class="menu-section" id="section-desserts">
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">Chocolate Fondant</div>
+            <div class="menu-item-desc">Valrhona dark chocolate, vanilla bean ice cream, caramelized cocoa nibs, gold leaf</div>
+            <span class="menu-item-tag">CROWD FAVOURITE</span>
+          </div>
+          <div class="menu-item-price">$18</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-1">
+          <div>
+            <div class="menu-item-name">Crème Brûlée</div>
+            <div class="menu-item-desc">Madagascan vanilla, house-made caramel, fresh berries, tulipe biscuit</div>
+          </div>
+          <div class="menu-item-price">$16</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-2">
+          <div>
+            <div class="menu-item-name">Raspberry Soufflé</div>
+            <div class="menu-item-desc">Light raspberry soufflé, Champagne sorbet, raspberry coulis — allow 20 minutes</div>
+          </div>
+          <div class="menu-item-price">$22</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-3">
+          <div>
+            <div class="menu-item-name">Cheese Selection</div>
+            <div class="menu-item-desc">Artisan cheese board, seasonal accompaniments, house chutney, crackers</div>
+          </div>
+          <div class="menu-item-price">$26</div>
+        </div>
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">Mango Pannacotta</div>
+            <div class="menu-item-desc">Silky coconut pannacotta, passion fruit mango salsa, lime zest, toasted coconut</div>
+          </div>
+          <div class="menu-item-price">$16</div>
+        </div>
+      </div>
+
+      <!-- Cocktails -->
+      <div class="menu-section" id="section-cocktails">
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">The Gold Standard</div>
+            <div class="menu-item-desc">Tanqueray gin, elderflower liqueur, cucumber, lemon, gold shimmer, soda</div>
+            <span class="menu-item-tag">HOUSE SPECIAL</span>
+          </div>
+          <div class="menu-item-price">$18</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-1">
+          <div>
+            <div class="menu-item-name">Smoke & Velvet</div>
+            <div class="menu-item-desc">Mezcal, black cherry, amaretto, smoked rosemary, activated charcoal salt rim</div>
+            <span class="menu-item-tag">SIGNATURE</span>
+          </div>
+          <div class="menu-item-price">$20</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-2">
+          <div>
+            <div class="menu-item-name">Rose Garden</div>
+            <div class="menu-item-desc">Ketel One vodka, rose water, lychee, fresh lime, prosecco float</div>
+          </div>
+          <div class="menu-item-price">$17</div>
+        </div>
+        <div class="menu-item reveal reveal-delay-3">
+          <div>
+            <div class="menu-item-name">The Midnight Manhattan</div>
+            <div class="menu-item-desc">Bourbon, sweet vermouth, black walnut bitters, brandied cherry</div>
+          </div>
+          <div class="menu-item-price">$19</div>
+        </div>
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">Virgin Botanical</div>
+            <div class="menu-item-desc">Seedlip, basil, passion fruit, pineapple, fever-tree tonic, fresh mint — Non-alcoholic</div>
+          </div>
+          <div class="menu-item-price">$12</div>
+        </div>
+        <div class="menu-item reveal">
+          <div>
+            <div class="menu-item-name">Champagne & Pearls</div>
+            <div class="menu-item-desc">Veuve Clicquot, elderflower, lychee pearls, edible bubble wrap</div>
+            <span class="menu-item-tag">PREMIUM</span>
+          </div>
+          <div class="menu-item-price">$28</div>
+        </div>
+      </div>
+
+    </div><!-- end page-scroll-content -->
+  </div><!-- end page-layout -->
+
+  <!-- Social Sidebar -->
+  <div class="social-sidebar">
+    <a href="#" class="social-icon" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="#" class="social-icon" aria-label="Twitter/X">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.736l7.324-9.06L2 2.25h6.016l4.27 5.65 5.958-5.65Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+    </a>
+    <a href="#" class="social-icon" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+  </div>
+
+
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-ring" id="cursor-ring"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

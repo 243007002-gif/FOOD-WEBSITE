@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reserve a table at Bibek Roy Fine Dining. Complete our booking form and experience an evening of culinary excellence.">
+  <title>Reservation – Bibek Roy Fine Dining</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="main-nav">
+    <div class="nav-inner">
+      <button class="nav-hamburger" id="hamburger-btn" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a href="index.html" class="nav-logo">
+        <svg class="logo-svg" viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="logoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#E5D6C1"/>
+              <stop offset="100%" style="stop-color:#C9A96E"/>
+            </linearGradient>
+          </defs>
+          <line x1="10" y1="12" x2="60" y2="12" stroke="url(#logoGrad)" stroke-width="0.7" opacity="0.6"/>
+          <line x1="160" y1="12" x2="210" y2="12" stroke="url(#logoGrad)" stroke-width="0.7" opacity="0.6"/>
+          <polygon points="110,8 113,12 110,16 107,12" fill="url(#logoGrad)" opacity="0.8"/>
+          <text x="110" y="37" font-family="Cormorant Garamond, serif" font-size="20" font-weight="500" font-style="italic" fill="url(#logoGrad)" text-anchor="middle" letter-spacing="3">Bibek Roy</text>
+          <text x="110" y="52" font-family="Inter, sans-serif" font-size="7" font-weight="300" fill="#A08060" text-anchor="middle" letter-spacing="4">FINE DINING</text>
+          <line x1="10" y1="57" x2="60" y2="57" stroke="url(#logoGrad)" stroke-width="0.5" opacity="0.4"/>
+          <line x1="160" y1="57" x2="210" y2="57" stroke="url(#logoGrad)" stroke-width="0.5" opacity="0.4"/>
+        </svg>
+      </a>
+      <div class="nav-links">
+        <a href="menu.html" class="nav-link">MENU</a>
+        <a href="about.html" class="nav-link">ABOUT</a>
+        <a href="reservation.html" class="nav-btn">BOOK A TABLE</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Full-Screen Menu Overlay -->
+  <div class="menu-overlay" id="menu-overlay">
+    <button class="menu-overlay-close" id="menu-overlay-close" aria-label="Close menu">✕</button>
+    <div class="menu-overlay-inner">
+      <nav class="menu-overlay-nav">
+        <a href="index.html" class="overlay-link">Home</a>
+        <a href="menu.html" class="overlay-link">Menu</a>
+        <a href="about.html" class="overlay-link">About</a>
+        <a href="reservation.html" class="overlay-link">Reservation</a>
+      </nav>
+      <div class="overlay-info">
+        <p>Mon–Sun: 12:00 – 23:00</p>
+        <p>+1 (555) 234-5678</p>
+        <p>12 Gourmet Lane, New York</p>
+      </div>
+      <div class="overlay-social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+        </a>
+        <a href="#" aria-label="Twitter">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.736l7.324-9.06L2 2.25h6.016l4.27 5.65 5.958-5.65Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="overlay-image-side">
+      <img src="images/reservation.png" alt="Restaurant ambiance" loading="lazy">
+    </div>
+  </div>
+
+  <!-- Reservation Layout -->
+  <div class="reservation-page">
+    <!-- Sticky Image Side -->
+    <div class="reservation-image-side">
+      <img src="images/reservation.png" alt="Fine dining experience">
+      <div style="position:absolute; inset:0; display:flex; align-items:flex-end; padding:60px; background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);">
+        <div>
+          <p style="font-family:var(--font-sans); font-size:10px; letter-spacing:4px; color:var(--text-gold); margin-bottom:12px;">EST. 2024</p>
+          <p style="font-family:var(--font-serif); font-size:36px; font-weight:300; color:var(--text-cream); font-style:italic; line-height:1.1;">"Every meal is a<br>new chapter"</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Side -->
+    <div class="reservation-content-side">
+      <div class="reservation-header reveal">
+        <span class="section-tag">RESERVATIONS</span>
+        <h1>Book Your<br><em>Table</em></h1>
+        <p>Please complete the form below and we will confirm your reservation within 24 hours. For same-day bookings, please call us directly.</p>
+      </div>
+
+      <!-- Booking Info Cards -->
+      <div class="booking-info-cards reveal">
+        <div class="booking-info-card">
+          <div class="booking-info-card-icon">🕐</div>
+          <div class="booking-info-card-title">HOURS</div>
+          <div class="booking-info-card-text">Mon–Sun<br>12:00 – 23:00<br>Last seating: 21:30</div>
+        </div>
+        <div class="booking-info-card">
+          <div class="booking-info-card-icon">📞</div>
+          <div class="booking-info-card-title">CALL US</div>
+          <div class="booking-info-card-text">+1 (555) 234-5678<br>Available during<br>opening hours</div>
+        </div>
+        <div class="booking-info-card">
+          <div class="booking-info-card-icon">📍</div>
+          <div class="booking-info-card-title">LOCATION</div>
+          <div class="booking-info-card-text">12 Gourmet Lane<br>New York, NY 10001<br>Valet available</div>
+        </div>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="booking-form reveal" id="booking-form-wrapper">
+        <form id="reservation-form" novalidate>
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label" for="first-name">FIRST NAME *</label>
+              <input type="text" id="first-name" name="firstName" class="form-input" placeholder="John" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="last-name">LAST NAME *</label>
+              <input type="text" id="last-name" name="lastName" class="form-input" placeholder="Smith" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="email">EMAIL ADDRESS *</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="john@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="phone">PHONE NUMBER *</label>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder="+1 (555) 000-0000" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="guests">NUMBER OF GUESTS *</label>
+              <select id="guests" name="guests" class="form-select" required>
+                <option value="" disabled selected>Select guests</option>
+                <option value="1">1 Guest</option>
+                <option value="2">2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="7">7 Guests</option>
+                <option value="8">8 Guests</option>
+                <option value="9+">9+ Guests (private dining enquiry)</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="occasion">OCCASION</label>
+              <select id="occasion" name="occasion" class="form-select">
+                <option value="" disabled selected>Select occasion</option>
+                <option value="none">No special occasion</option>
+                <option value="birthday">Birthday</option>
+                <option value="anniversary">Anniversary</option>
+                <option value="proposal">Proposal</option>
+                <option value="business">Business dinner</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="date">PREFERRED DATE *</label>
+              <input type="date" id="date" name="date" class="form-input" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="time">PREFERRED TIME *</label>
+              <select id="time" name="time" class="form-select" required>
+                <option value="" disabled selected>Select time</option>
+                <option>12:00 PM – Lunch</option>
+                <option>12:30 PM – Lunch</option>
+                <option>13:00 PM – Lunch</option>
+                <option>13:30 PM – Lunch</option>
+                <option>18:00 PM – Dinner</option>
+                <option>18:30 PM – Dinner</option>
+                <option>19:00 PM – Dinner</option>
+                <option>19:30 PM – Dinner</option>
+                <option>20:00 PM – Dinner</option>
+                <option>20:30 PM – Dinner</option>
+                <option>21:00 PM – Dinner</option>
+                <option>21:30 PM – Dinner (Last seating)</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label class="form-label" for="dietary">DIETARY REQUIREMENTS & ALLERGIES</label>
+              <input type="text" id="dietary" name="dietary" class="form-input" placeholder="e.g. vegetarian, gluten-free, nut allergy...">
+            </div>
+            <div class="form-group full">
+              <label class="form-label" for="notes">SPECIAL REQUESTS</label>
+              <textarea id="notes" name="notes" class="form-textarea" placeholder="Any special requests, dietary needs, or notes for our team..."></textarea>
+            </div>
+          </div>
+          <div class="form-submit-group">
+            <button type="submit" class="form-submit-btn" id="submit-reservation">CONFIRM RESERVATION</button>
+            <p class="form-note">We'll confirm your booking within 24 hours.<br>For events of 9+, we'll reach out directly.</p>
+          </div>
+        </form>
+
+        <!-- Success State -->
+        <div class="form-success" id="form-success">
+          <div class="success-icon">✓</div>
+          <h3>Reservation Received</h3>
+          <p>Thank you! We've received your request and will confirm your table within 24 hours via email or phone.</p>
+          <a href="index.html" style="margin-top:16px; font-size:11px; letter-spacing:2px; color:var(--text-gold); border-bottom:1px solid var(--border-gold); padding-bottom:4px; text-decoration:none; transition:all 0.4s;">← RETURN HOME</a>
+        </div>
+      </div>
+
+    </div><!-- end reservation-content-side -->
+  </div><!-- end reservation-page -->
+
+  <!-- Social Sidebar -->
+  <div class="social-sidebar">
+    <a href="#" class="social-icon" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a href="#" class="social-icon" aria-label="Twitter/X">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.736l7.324-9.06L2 2.25h6.016l4.27 5.65 5.958-5.65Zm-1.161 17.52h1.833L7.084 4.126H5.117Z"/></svg>
+    </a>
+    <a href="#" class="social-icon" aria-label="Facebook">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+    </a>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-ring" id="cursor-ring"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
